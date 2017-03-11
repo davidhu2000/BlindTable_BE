@@ -1,0 +1,2 @@
+class ReservationJoin < ApplicationRecord
+end
