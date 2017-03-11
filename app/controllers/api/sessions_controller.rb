@@ -8,16 +8,7 @@ class Api::SessionsController < ApplicationController
       render json: ['Phone number not found'], status: 404
     end
   end
-
-  def destroy
-    if current_user
-      logout
-      render json: { currentUser: nil, errors: [] }
-    else
-      render json: ['There is no user logged in'], status: 404
-    end
-  end
-
+  
   private
   def session_params
     params.require(:user).permit(:phone_number)

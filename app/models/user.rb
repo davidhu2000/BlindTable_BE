@@ -7,7 +7,7 @@
 #  description   :text             not null
 #  first_name    :string           not null
 #  last_name     :string           not null
-#  phone_number  :integer          not null
+#  phone_number  :string           not null
 #  session_token :string           not null
 #  authy_id      :string           not null
 #  created_at    :datetime         not null
@@ -18,6 +18,9 @@ class User < ApplicationRecord
   validates :image_url, :description, :first_name, :last_name, :phone_number, :session_token, :authy_id, presence: true
 
   validates :phone_number, format: { with: /\d{3}-\d{3}-\d{4}/, message: "bad format" }, uniqueness: true
+
+  has_many :reservation_joins
+  has_many :reservations, through: :reservation_joins, source: :reservation
 
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
