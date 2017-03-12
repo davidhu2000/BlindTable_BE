@@ -2,6 +2,7 @@ class Api::SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
+    p params
     @user = User.find_by(
       phone_number: params[:user][:phone_number],
       authy_id: params[:user][:authy_id]

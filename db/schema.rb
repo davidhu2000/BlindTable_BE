@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170312012632) do
-=======
-ActiveRecord::Schema.define(version: 20170312001548) do
->>>>>>> 1faf192303306ed68602bbc256eafac4aa443665
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "availabilities", force: :cascade do |t|
     t.integer  "radius",                        null: false
     t.integer  "party_size",       default: 4,  null: false
@@ -32,13 +27,6 @@ ActiveRecord::Schema.define(version: 20170312001548) do
     t.datetime "updated_at",                    null: false
   end
 
-  create_table "reservations", force: :cascade do |t|
-    t.string  "rid",                 null: false
-    t.string  "confirmation_number", null: false
-    t.integer "party_size",          null: false
-    t.string  "first_name",          null: false
-    t.string  "last_name",           null: false
-=======
   create_table "reservation_joins", force: :cascade do |t|
     t.integer  "reservation_id", null: false
     t.integer  "user_id",        null: false
@@ -58,7 +46,6 @@ ActiveRecord::Schema.define(version: 20170312001548) do
     t.time     "time",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 1faf192303306ed68602bbc256eafac4aa443665
   end
 
   create_table "users", force: :cascade do |t|
