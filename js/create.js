@@ -7,7 +7,11 @@ export async function main(event, context, callback) {
     TableName: 'reservations',
     Item: {
       restaurantId: event.requestContext.authorizer.claims.sub,
-      reservationId: data.content,
+      reservationId: data.reservationId,
+      addresss: data.address,
+      city: data.city,
+      state: data.state,
+      postal_code: data.postal_code,
       users: data.users,
       createdAt: new Date().getTime(),
     },

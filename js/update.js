@@ -12,10 +12,9 @@ export async function main(event, context, callback) {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: 'SET content = :content, attachment = :attachment',
+    UpdateExpression: 'SET users = :users',
     ExpressionAttributeValues: {
-      ':attachment': data.attachment ? data.attachment : null,
-      ':content': data.content ? data.content : null,
+      ':users': data.users ? data.users : null,
     },
     ReturnValues: 'ALL_NEW',
   };
