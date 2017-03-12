@@ -84,12 +84,13 @@ class Api::ReservationsController < ApplicationController
   end
 
   def index
-    if params[:searchInput]
-      @reservations = Reservation.all.where('LOWER(name) ~ LOWER(?)', params[:searchInput])
+    debugger
+    if params[:time]
+      @reservations = Reservation.all.where('LOWER(name) ~ LOWER(?)', params[:time])
     else
       @reservations = Reservation.all
     end
-    render 'api/reservations/index.json.jbuilder'
+    render 'api/reservations/index'
   end
 
   def update
@@ -105,7 +106,7 @@ class Api::ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     ReservationJoin.find_by(reservation_id: @reservation.id, user_id: current_user.id).delete
     @reservation.delete
-    # render 'api/reservations/index'
+    render 'api/reservations/index'
   end
 
   private
