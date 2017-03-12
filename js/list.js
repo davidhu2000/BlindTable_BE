@@ -8,9 +8,9 @@ export async function main(event, context, callback) {
     // - 'userId = :userId': only return items with matching 'userId' partition key
     // 'ExpressionAttributeValues' defines the value in the condition
     // - ':userId': defines 'userId' to be User Pool sub of the authenticated user
-    KeyConditionExpression: "userId = :userId",
+    KeyConditionExpression: "restaurantId = :restaurantId",
     ExpressionAttributeValues: {
-      ":userId": event.requestContext.authorizer.claims.sub,
+      ":restaurantId": event.requestContext.authorizer.claims.sub,
     }
   };
 

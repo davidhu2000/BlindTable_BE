@@ -4,11 +4,9 @@ import { success, failure } from './helpers/response-lib';
 export async function main(event, context, callback) {
   const params = {
     TableName: 'reservations',
-    // 'Key' defines the partition key and sort key of the time to be retrieved
-    // - 'userId': federated identity ID of the authenticated user
-    // - 'noteId': path parameter
+
     Key: {
-      userId: event.requestContext.authorizer.claims.sub,
+      restaurantId: event.requestContext.authorizer.claims.sub,
       reservationId: event.pathParameters.id,
     },
   };

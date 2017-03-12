@@ -1,4 +1,3 @@
-import uuid from 'uuid';
 import * as dynamoDbLib from './helpers/dynamodb-lib';
 import { success, failure } from './helpers/response-lib';
 
@@ -7,10 +6,9 @@ export async function main(event, context, callback) {
   const params = {
     TableName: 'reservations',
     Item: {
-      userId: event.requestContext.authorizer.claims.sub,
-      reservationId: uuid.v1(),
-      content: data.content,
-      attachment: data.attachment,
+      restaurantId: event.requestContext.authorizer.claims.sub,
+      reservationId: data.content,
+      users: data.users,
       createdAt: new Date().getTime(),
     },
   };

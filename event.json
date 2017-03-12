@@ -10,9 +10,3 @@
     }
   }
 }
-
-
-curl https://2jizy0fxib.execute-api.us-west-2.amazonaws.com/prod/reservations  -H "Authorization:eyJraWQiOiIzeW1Ed2tCTUhRbVBlZkpvVkc0UGZlNCs0blp3QVphYVo5dzFOR3VHMUpZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5ZWVmODliNC0yYjMwLTQ2YjUtYTI2NS0yN2ZiYWFlZWIwNzkiLCJhdWQiOiIxYWE2NHBqM28xNHN1MWlmM21rOXBpaGp2aCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNDg5MzA3MzEzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9IQ0JNWFJNWngiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOmZhbHNlLCJjb2duaXRvOnVzZXJuYW1lIjoicmF5bW9uZCIsInBob25lX251bWJlciI6IisxNDE1MjIyMzM0NCIsImV4cCI6MTQ4OTMxMDkxMywiaWF0IjoxNDg5MzA3MzEzfQ.ZGbSb7fPrWzn7bFLqX4qDLoYJ8upRksHL_u2L17g1dXIvvQasLokdzQxaglNcivfWMOQTTgQAjrpp55kP2kuzIJ3j08hFQuECDFVKIrIn_TJ1YhBLJfbGsdSw-7Ssj6kaAnUijwX4CVrolEARAQxvplN22N1rhl6eJcEicLl2ZoxMICfrQoFMcJsKbGCCUJ59ertv4VazKkej3GgdQlWn26xsnTgoDllNM5VMQ0WC2mZFbbSN0azXCKFgA3pmd34WEF0jhQytDyNt-a_9Dyj46kjhhQDlcnRpmXCcsuLir6jqa-8qZyt8Ut-62_7ozHXvI-C8lLO5u8KBEWm6GD-OQ"  -d "{\"content\":\"hello world\",\"attachment\":\"hello.jpg\"}"
-
-
-aws cognito-idp admin-initiate-auth --region us-west-2 --user-pool-id us-west-2_HCBMXRMZx --client-id 1aa64pj3o14su1if3mk9pihjvh --auth-flow ADMIN_NO_SRP_AUTH --auth-parameters USERNAME=raymond,PASSWORD=Passw0rd!

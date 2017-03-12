@@ -5,11 +5,9 @@ export async function main(event, context, callback) {
   const data = JSON.parse(event.body);
   const params = {
     TableName: 'reservations',
-    // 'Key' defines the partition key and sort key of the time to be updated
-    // - 'userId': User Pool sub of the authenticated user
-    // - 'reservationId': path parameter
+
     Key: {
-      userId: event.requestContext.authorizer.claims.sub,
+      restaurantId: event.requestContext.authorizer.claims.sub,
       reservationId: event.pathParameters.id,
     },
     // 'UpdateExpression' defines the attributes to be updated
