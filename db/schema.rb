@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311205943) do
+ActiveRecord::Schema.define(version: 20170312012632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "availabilities", force: :cascade do |t|
+    t.integer  "radius",                        null: false
+    t.integer  "party_size",       default: 4,  null: false
+    t.integer  "forward_minutes",  default: 60, null: false
+    t.integer  "backward_minutes", default: 0,  null: false
+    t.string   "start_date_tiime",              null: false
+    t.string   "longitude",                     null: false
+    t.string   "latitude",                      null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string  "rid",                 null: false
+    t.string  "confirmation_number", null: false
+    t.integer "party_size",          null: false
+    t.string  "first_name",          null: false
+    t.string  "last_name",           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "image_url",     null: false

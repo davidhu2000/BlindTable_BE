@@ -7,7 +7,7 @@
 #  description   :text             not null
 #  first_name    :string           not null
 #  last_name     :string           not null
-#  phone_number  :integer          not null
+#  phone_number  :string           not null
 #  session_token :string           not null
 #  authy_id      :string           not null
 #  created_at    :datetime         not null
