@@ -12,6 +12,7 @@
 #  authy_id      :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  country_code  :string
 #
 
 require 'test_helper'

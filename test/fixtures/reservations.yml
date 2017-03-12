@@ -2,15 +2,11 @@
 #
 # Table name: reservations
 #
-#  id         :integer          not null, primary key
-#  name       :string           not null
-#  address    :string           not null
-#  state      :string           not null
-#  city       :string           not null
-#  zip        :string           not null
-#  time       :time             not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                  :integer          not null, primary key
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  rid                 :string           not null
+#  confirmation_number :string           not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
