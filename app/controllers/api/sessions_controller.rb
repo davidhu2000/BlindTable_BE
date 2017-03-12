@@ -1,16 +1,17 @@
 class Api::SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
-    @user = User.find_by_phone_number(session_params[:phone_number])
+    @user = User.find_by(
+      phone_number: params[:user][:phone_number],
+      authy_id: params[:user][:authy_id]
+    )
+
     if @user
-      login(@user)
-      render 'api/users/show'
+      sign_in(@user)
+      render json: @user
     else
-      render json: ['Phone number not found'], status: 404
+      render json: ["Invalid verification code"], status: 401
     end
-  end
-  
-  private
-  def session_params
-    params.require(:user).permit(:phone_number)
   end
 end
