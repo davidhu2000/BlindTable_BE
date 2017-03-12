@@ -22,7 +22,6 @@ class Api::UsersController < ApplicationController
       render json: @user, status: 200
     else
       @user = User.new(user_params)
-      debugger
       if @user.save
         message = "Please enter verification code #{@user.authy_id}"
         to = "1 #{@user.phone_number}"
