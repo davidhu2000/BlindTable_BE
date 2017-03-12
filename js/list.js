@@ -5,9 +5,8 @@ export async function main(event, context, callback) {
   const params = {
     TableName: 'reservations',
     // 'KeyConditionExpression' defines the condition for the query
-    // - 'userId = :userId': only return items with matching 'userId' partition key
     // 'ExpressionAttributeValues' defines the value in the condition
-    // - ':userId': defines 'userId' to be User Pool sub of the authenticated user
+
     KeyConditionExpression: "restaurantId = :restaurantId",
     ExpressionAttributeValues: {
       ":restaurantId": event.requestContext.authorizer.claims.sub,

@@ -1,7 +1,5 @@
 {
-  "pathParameters": {
-    "id": "3b875ad0-06f5-11e7-9ce2-53baf8d5d9a9"
-  },
+  "body": "{\"restaurantId\":\"1\",\"reservationId\":\"uno\",\"address\":\"123 main\",\"city\":\"sf\",\"state\":\"CA\",\"postal_code\":\"94105\",\"users\":\"[1,2,3,4]\"}",
   "requestContext": {
     "authorizer": {
       "claims": {

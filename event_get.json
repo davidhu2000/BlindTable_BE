@@ -1,0 +1,12 @@
+{
+  "pathParameters": {
+    "id": "eins"
+  },
+  "requestContext": {
+    "authorizer": {
+      "claims": {
+        "sub": "uno"
+      }
+    }
+  }
+}

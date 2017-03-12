@@ -16,6 +16,6 @@ export async function main(event, context, callback) {
     callback(null, success({status: true}));
   }
   catch(e) {
-    callback(null, failure({status: false}));
+    callback(null, failure({status: e.message}));
   }
 };

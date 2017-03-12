@@ -6,12 +6,12 @@ export async function main(event, context, callback) {
   const params = {
     TableName: 'reservations',
     Item: {
-      restaurantId: event.requestContext.authorizer.claims.sub,
+      restaurantId: data.restaurantId,
       reservationId: data.reservationId,
       addresss: data.address,
       city: data.city,
       state: data.state,
-      postal_code: data.postal_code,
+      postalCode: data.postal_code,
       users: data.users,
       createdAt: new Date().getTime(),
     },
@@ -22,6 +22,6 @@ export async function main(event, context, callback) {
     callback(null, success(params.Item));
   }
   catch(e) {
-    callback(null, failure({status: false}));
+    callback(null, failure({status: e.message}));
   }
 };
