@@ -1,5 +1,5 @@
 {
-  "body": "{\"restaurantId\":\"1\",\"reservationId\":\"uno\",\"address\":\"123 main\",\"city\":\"sf\",\"state\":\"CA\",\"postal_code\":\"94105\",\"users\":\"[1,2,3,4]\"}",
+  "body": "{\"restaurantId\":\"hello world\",\"reservationId\":\"hello.jpg\"}",
   "requestContext": {
     "authorizer": {
       "claims": {

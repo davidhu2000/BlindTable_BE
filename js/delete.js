@@ -1,5 +1,5 @@
-import * as dynamoDbLib from './helpers/dynamodb-lib';
-import { success, failure } from './helpers/response-lib';
+import * as dynamoDbLib from './js/dynamodb-lib';
+import { success, failure } from './js/response-lib';
 
 export async function main(event, context, callback) {
   const params = {

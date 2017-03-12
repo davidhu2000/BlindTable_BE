@@ -223,7 +223,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/blindtable/prod/1489342876268-2017-03-12T18:21:16.268Z/blindtable.zip"
+          "S3Key": "serverless/blindtable/prod/1489350304102-2017-03-12T20:25:04.102Z/blindtable.zip"
         },
         "FunctionName": "blindtable-prod-create",
         "Handler": "create.main",
@@ -241,14 +241,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreateLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ": {
+    "CreateLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateLambdaFunction"
         },
-        "CodeSha256": "gI/0enGZug0HWAKh1ySR5roULSwMQeAPbrH+92ZBBcQ="
+        "CodeSha256": "fmMp0pNDeoyEl/PWjrVmuA0E8iaTQ6qV1eY/D7mfJac="
       }
     },
     "GetLambdaFunction": {
@@ -258,7 +258,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/blindtable/prod/1489342876268-2017-03-12T18:21:16.268Z/blindtable.zip"
+          "S3Key": "serverless/blindtable/prod/1489350304102-2017-03-12T20:25:04.102Z/blindtable.zip"
         },
         "FunctionName": "blindtable-prod-get",
         "Handler": "get.main",
@@ -276,14 +276,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ": {
+    "GetLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetLambdaFunction"
         },
-        "CodeSha256": "gI/0enGZug0HWAKh1ySR5roULSwMQeAPbrH+92ZBBcQ="
+        "CodeSha256": "fmMp0pNDeoyEl/PWjrVmuA0E8iaTQ6qV1eY/D7mfJac="
       }
     },
     "ListLambdaFunction": {
@@ -293,7 +293,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/blindtable/prod/1489342876268-2017-03-12T18:21:16.268Z/blindtable.zip"
+          "S3Key": "serverless/blindtable/prod/1489350304102-2017-03-12T20:25:04.102Z/blindtable.zip"
         },
         "FunctionName": "blindtable-prod-list",
         "Handler": "list.main",
@@ -311,14 +311,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ListLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ": {
+    "ListLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ListLambdaFunction"
         },
-        "CodeSha256": "gI/0enGZug0HWAKh1ySR5roULSwMQeAPbrH+92ZBBcQ="
+        "CodeSha256": "fmMp0pNDeoyEl/PWjrVmuA0E8iaTQ6qV1eY/D7mfJac="
       }
     },
     "UpdateLambdaFunction": {
@@ -328,7 +328,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/blindtable/prod/1489342876268-2017-03-12T18:21:16.268Z/blindtable.zip"
+          "S3Key": "serverless/blindtable/prod/1489350304102-2017-03-12T20:25:04.102Z/blindtable.zip"
         },
         "FunctionName": "blindtable-prod-update",
         "Handler": "update.main",
@@ -346,14 +346,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UpdateLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ": {
+    "UpdateLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateLambdaFunction"
         },
-        "CodeSha256": "gI/0enGZug0HWAKh1ySR5roULSwMQeAPbrH+92ZBBcQ="
+        "CodeSha256": "fmMp0pNDeoyEl/PWjrVmuA0E8iaTQ6qV1eY/D7mfJac="
       }
     },
     "DeleteLambdaFunction": {
@@ -363,7 +363,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/blindtable/prod/1489342876268-2017-03-12T18:21:16.268Z/blindtable.zip"
+          "S3Key": "serverless/blindtable/prod/1489350304102-2017-03-12T20:25:04.102Z/blindtable.zip"
         },
         "FunctionName": "blindtable-prod-delete",
         "Handler": "delete.main",
@@ -381,14 +381,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "DeleteLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ": {
+    "DeleteLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteLambdaFunction"
         },
-        "CodeSha256": "gI/0enGZug0HWAKh1ySR5roULSwMQeAPbrH+92ZBBcQ="
+        "CodeSha256": "fmMp0pNDeoyEl/PWjrVmuA0E8iaTQ6qV1eY/D7mfJac="
       }
     },
     "ApiGatewayRestApi": {
@@ -527,10 +527,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -555,8 +552,7 @@
           }
         },
         "MethodResponses": []
-      },
-      "DependsOn": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
+      }
     },
     "ApiGatewayMethodReservationsIdVarGet": {
       "Type": "AWS::ApiGateway::Method",
@@ -611,10 +607,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -639,8 +632,7 @@
           }
         },
         "MethodResponses": []
-      },
-      "DependsOn": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
+      }
     },
     "ApiGatewayMethodReservationsIdVarPut": {
       "Type": "AWS::ApiGateway::Method",
@@ -653,10 +645,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -681,8 +670,7 @@
           }
         },
         "MethodResponses": []
-      },
-      "DependsOn": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
+      }
     },
     "ApiGatewayMethodReservationsIdVarDelete": {
       "Type": "AWS::ApiGateway::Method",
@@ -695,10 +683,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -723,8 +708,7 @@
           }
         },
         "MethodResponses": []
-      },
-      "DependsOn": "2UnderscoreHCBMXRMZxApiGatewayAuthorizer"
+      }
     },
     "2UnderscoreHCBMXRMZxApiGatewayAuthorizer": {
       "Type": "AWS::ApiGateway::Authorizer",
@@ -741,7 +725,7 @@
         ]
       }
     },
-    "ApiGatewayDeployment1489342876282": {
+    "ApiGatewayDeployment1489350304117": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -932,31 +916,31 @@
     "CreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ"
+        "Ref": "CreateLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac"
       }
     },
     "GetLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ"
+        "Ref": "GetLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac"
       }
     },
     "ListLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ListLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ"
+        "Ref": "ListLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac"
       }
     },
     "UpdateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ"
+        "Ref": "UpdateLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac"
       }
     },
     "DeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteLambdaVersiongI0enGZug0HWAKh1ySR5roULSwMQeAPbrH92ZBBcQ"
+        "Ref": "DeleteLambdaVersionfmMp0pNDeoyElPWjrVmuA0E8iaTQ6qV1eYD7mfJac"
       }
     },
     "ServiceEndpoint": {
