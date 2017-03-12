@@ -62,6 +62,15 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
+  delete:
+    handler: delete.main
+    events:
+      - http:
+          path: reservations/{id}
+          method: delete
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
