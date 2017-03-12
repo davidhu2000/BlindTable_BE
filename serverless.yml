@@ -44,6 +44,24 @@ functions:
           cors: true
           authorizer:
             arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
+  list:
+    handler: list.main
+    events:
+      - http:
+          path: reservations
+          method: get
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
+  update:
+    handler: update.main
+    events:
+      - http:
+          path: reservations/{id}
+          method: put
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
