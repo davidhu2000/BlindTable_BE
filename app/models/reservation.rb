@@ -1,5 +1,5 @@
 class Reservation < ApplicationRecord
-  validates :name, :address, :state, :city, :zip, :time, presence: true
+  validates :confirmation_number, :rid, presence: true
 
   has_many :reservation_joins
   has_many :users, through: :reservation_joins, source: :user
