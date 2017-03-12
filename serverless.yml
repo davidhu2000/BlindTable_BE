@@ -12,42 +12,38 @@ provider:
   stage: prod
   region: us-west-2
 
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:us-west-2:*:*"
 
-# you can add statements to the Lambda function's IAM Role here
-#  iamRoleStatements:
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:ListBucket"
-#      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:PutObject"
-#      Resource:
-#        Fn::Join:
-#          - ""
-#          - - "arn:aws:s3:::"
-#            - "Ref" : "ServerlessDeploymentBucket"
-#            - "/*"
-
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  create:
+    handler: create.main
+    events:
+      - http:
+          path: reservations
+          method: post
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
+  get:
+    handler: get.main
+    events:
+      - http:
+          path: reservations/{id}
+          method: get
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:us-west-2:672685466128:userpool/us-west-2_HCBMXRMZx
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

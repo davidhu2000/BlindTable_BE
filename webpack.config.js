@@ -4,6 +4,8 @@ process.env.NODE_ENV = 'production';
 
 module.exports = {
   entry: {
+    create: './js/create.js',
+    get: './js/get.js'
   },
   target: 'node',
   // because 'aws-sdk' is not compatible with webpack,
