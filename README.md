@@ -11,7 +11,7 @@
 
 ##Product
 
-![BlindTable page](./assets/images/bt.png)
+![BlindTable page](./app/assets/images/bt.png)
 
 ## Background
 
