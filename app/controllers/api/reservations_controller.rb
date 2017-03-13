@@ -71,10 +71,9 @@ class Api::ReservationsController < ApplicationController
     #   first_name: faker_first_name,
     #   last_name: faker_last_name
     # )
-
     @reservation = Reservation.new(
       rid: reservation_params["restaurant_id"],
-      confirmation_number: Faker::Number,
+      confirmation_number: Faker::Number.number(10),
       date_time: reservation_params["date_time"],
       party_size: reservation_params["party_size"],
       first_name: faker_first_name,

@@ -28,22 +28,54 @@ class Api::AvailabilitiesController < ApplicationController
     # r_url = URI("https://platform.otqa.com/availability")
 
 
+    offset = 100
+
+    url = URI("https://platform.otqa.com/sync/listings")
+
+    http_net = Net::HTTP.new(url.host, url.port)
+    http_net.use_ssl = true
+
+    @availability = Hash.new
+
+    until @availability.keys.count > 10
+      url.query = "offset=#{offset}&country=US"
+
+      response = http_net.start do |http|
+        request = Net::HTTP::Get.new(url)
+        request["Authorization"] = "Bearer 27037c67-f394-4cfd-ab51-069ac71132fb"
+        request["Content-type"] = "application/json"
+
+        http.request(request)
+      end
+
+      listings = JSON.parse(response.body)['items']
+
+      listings.each do |listing|
+        if listing['city'] == 'San Francisco'
+          @availability[listing['rid']] = listing
+        end
+      end
+      p @availability.keys.count
+
+      offset += 100
+    end
+
 
     render json: @availability
   end
 
 
-  def availability_params
-    params
-      .require(:availability)
-      .permit(
-        :radius,
-        :party_size,
-        :forward_minutes,
-        :backward_minutes,
-        :start_date_time,
-        :longitude,
-        :latitude
-      )
-  end
+  # def availability_params
+  #   # params
+  #   #   .require(:availability)
+  #   #   .permit(
+  #   #     :radius,
+  #   #     :party_size,
+  #   #     :forward_minutes,
+  #   #     :backward_minutes,
+  #   #     :start_date_time,
+  #   #     :longitude,
+  #   #     :latitude
+  #   #   )
+  # end
 end
