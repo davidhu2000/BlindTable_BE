@@ -93,6 +93,32 @@ class Api::ReservationsController < ApplicationController
     render 'api/reservations/show'
   end
 
+  def index
+    debugger
+    if params[:time]
+      @reservations = Reservation.all.where('LOWER(name) ~ LOWER(?)', params[:time])
+    else
+      @reservations = Reservation.all
+    end
+    render 'api/reservations/index'
+  end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+      render 'api/reservations/show'
+    else
+      render json: @reservation.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    ReservationJoin.find_by(reservation_id: @reservation.id, user_id: current_user.id).delete
+    @reservation.delete
+    render 'api/reservations/index'
+  end
+
   private
   def reservation_params
     params
